@@ -91,19 +91,34 @@ const TodoList = () => {
                     </form>
 
                     <ul className='showItems'>
-                        {filteredItems.map((item, index) => (
-                            <h3
-                                key={index}
-                                style={{
-                                    textDecoration: item.completed ? 'line-through' : 'none',
-                                    color: item.completed ? 'gray' : 'black'
-                                }}
-                                onClick={() => toggleCompleted(index)}
-                            >
-                                {item.text}
-                                <button className='m-4' onClick={() => deleteItem(index)}>X</button>
-                            </h3>
-                        ))}
+                        {filteredItems.map((item, index) => {
+                            // <h3
+                            //     key={index}
+                            //     style={{
+                            //         textDecoration: item.completed ? 'line-through' : 'none',
+                            //         color: item.completed ? 'gray' : 'black'
+                            //     }}
+                            //     onClick={() => toggleCompleted(index)}
+                            // >
+                            //     {item.text}
+                            //     <button className='m-4' onClick={() => deleteItem(index)}>delete</button>
+                            // </h3>
+
+                            return (
+                                <div className="eachItem" key={index}>
+                                    <h3
+                                        style={{
+                                            textDecoration: item.completed ? 'line-through' : 'none',
+                                            color: item.completed ? 'gray' : 'white'
+                                        }}
+                                        onClick={() => toggleCompleted(index)}>{item.text}</h3>
+                                    <div className="todo-btn">
+                                        <i className="far fa-trash-alt add-btn" title="Delete Item" onClick={() => deleteItem(index)}></i>
+                                    </div>
+                                </div>
+                            )
+
+                        })}
                     </ul>
 
 
