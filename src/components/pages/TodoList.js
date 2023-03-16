@@ -106,24 +106,16 @@ const TodoList = () => {
                             // </h3>
 
                             return (
-<<<<<<< HEAD
                                 <div className="eachItem2" key={index}>
                                     <input onChange={() => toggleCompleted(index)} type='checkbox' checked={item.completed ? 'checked' : ''} />
 
-=======
-                                <div className="eachItem" key={index}>
->>>>>>> 3c34dbbe0fce5cc0e238ed59f96527e02ad5e90b
                                     <h3
                                         style={{
                                             textDecoration: item.completed ? 'line-through' : 'none',
                                             color: item.completed ? 'gray' : 'white'
                                         }}
-<<<<<<< HEAD
                                         onClick={() => toggleCompleted(index)}>{item.text}
                                     </h3>
-=======
-                                        onClick={() => toggleCompleted(index)}>{item.text}</h3>
->>>>>>> 3c34dbbe0fce5cc0e238ed59f96527e02ad5e90b
                                     <div className="todo-btn">
                                         <i className="far fa-trash-alt add-btn" title="Delete Item" onClick={() => deleteItem(index)}></i>
                                     </div>
