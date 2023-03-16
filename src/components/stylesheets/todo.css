@@ -132,7 +132,7 @@
   background: rgb(8, 252, 109);
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .eachItem:hover {

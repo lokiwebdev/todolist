@@ -11,6 +11,7 @@ import Errorpage from "./components/pages/Errorpage";
 
 import "./components/stylesheets/layout.css";
 import TodoList from "./components/pages/TodoList";
+import Abc from "./components/pages/Abc";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <div className="main">
           <Routes>
             <Route path="/" exact element={<Home />} />
+            <Route path="/abc" exact element={<Abc />} />
             <Route path="/about" exact element={<About />} />
             <Route path="/contact" exact element={<Contact />} />
             <Route path="/todolist" exact element={<TodoList />} />
